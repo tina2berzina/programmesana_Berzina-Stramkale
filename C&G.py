@@ -1,4 +1,4 @@
-sastavdalas = ["Piens", "Milti", "Cukurs", "Pūdercukurs", "Eļļa", "Ūdens", "Krējums", "Sviests", "Brūnais cukurs", "Kakao", "Saldais krējums", "Sāls", "Sīrups", "Auzu pārslas", "Jogurts", "Kanēlis", "Cepamais pulveris", "Sausais raugs", "Medus"]
+sastavdalas = ["Piens,", "Milti,", "Cukurs,", "Pūdercukurs,", "Eļļa,", "Ūdens,", "Krējums,", "Sviests,", "Brūnais cukurs,", "Kakao,", "Saldais krējums,", "Sāls,", "Sīrups,", "Auzu pārslas,", "Jogurts,", "Kanēlis,", "Cepamais pulveris,", "Sausais raugs,", "Medus"]
 
 cups = {
     "piens": ["tsp", "tbsp", "1/4", "1/3", "2/3", "1/2", "3/4", "1"],
@@ -44,12 +44,16 @@ grami = {
     "medus": [7, 21, 85, 113, 226, 170, 255, 340]
     
 }
-
+print("                       C&G")
 print("Programma pārveido receptes sastāvdaļas no ASV mērvienībām uz gramiem")
 print("Sastāvdaļas: ")
-for sastavdala in sastavdalas:
-    print(sastavdala)
-    
+midpoint = len(sastavdalas) // 2
+first_half = sastavdalas[:midpoint]
+second_half = sastavdalas[midpoint:]
+print(" ".join(first_half))
+print(" ".join(second_half))
+print()
+
 n = int(input("Cik Jums ir sastāvdaļas? - "))
 for i in range(n):
     s = input("Sastāvdaļa: ")
