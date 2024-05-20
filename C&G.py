@@ -53,7 +53,7 @@ mililitri = {
     
 }
 print("                       C&G")
-print("Programma pārveido receptes sastāvdaļas no ASV mērvienībām uz gramiem")
+print("Programma pārveido receptes sastāvdaļas no ASV mērvienībām uz gramiem vai mililitriem.")
 print("Sastāvdaļas: ")
 midpoint = len(sastavdalas) // 2
 first_half = sastavdalas[:midpoint]
