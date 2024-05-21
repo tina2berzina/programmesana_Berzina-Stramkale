@@ -53,10 +53,16 @@ mililitri = {
     "medus": [63, 84, 168, 126, 189, 252, 315, 336, 420, 378, 441, 504],
     
 }
-print("Programma pārveido receptes sastāvdaļas no ASV mērvienībām uz gramiem")
+print("                       C&G")
+print("Programma pārveido receptes sastāvdaļas no ASV mērvienībām uz gramiem vai mililitriem.")
+>>>>>>> main
 print("Sastāvdaļas: ")
-for sastavdala in sastavdalas:
-    print(sastavdala)
+midpoint = len(sastavdalas) // 2
+first_half = sastavdalas[:midpoint]
+second_half = sastavdalas[midpoint:]
+print(" ".join(first_half))
+print(" ".join(second_half))
+print()
     
 n = int(input("Cik Jums ir sastāvdaļas? - "))
 for i in range(n):
