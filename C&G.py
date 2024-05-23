@@ -65,26 +65,29 @@ print(" ".join(second_half))
 print()
     
 n = int(input("Cik Jums ir sastāvdaļas? - "))
-for i in range(n):
-    s = input("Sastāvdaļa: ")
-    if s not in cups:
-        print("Nederīga sastāvdaļa")
-        continue
+if n>0 and n==int(n):
+    for i in range(n):
+        s = input("Sastāvdaļa: ")
+        if s not in cups:
+            print("Nederīga sastāvdaļa.")
+            continue
     
-    sm = input("Sākotnējā mērvienība (cups): ")
-    if sm not in cups[s]:
-        print("Nederīga mērvienība")
-        continue
+        sm = input("Sākotnējā mērvienība (cups): ")
+        if sm not in cups[s]:
+            print("Nederīga mērvienība.")
+            continue
     
-    vm = input("Vēlamā mērvienība (g vai ml): ")
+        vm = input("Vēlamā mērvienība (g vai ml): ")
     
-    b = cups[s].index(sm)
-    if vm == "g":
-        print(grami[s][b], "grami")
-    elif vm == "ml":
-        if s in mililitri:
-            print(mililitri[s][b], "mililitri")
+        b = cups[s].index(sm)
+        if vm == "g":
+            print(grami[s][b], "grami")
+        elif vm == "ml":
+            if s in mililitri:
+                print(mililitri[s][b], "mililitri")
+            else:
+                print("Šī sastāvdaļa nevar tikt pārveidota uz mililitriem.")
         else:
-            print("Šī sastāvdaļa nevar tikt pārveidota uz mililitriem")
-    else:
-        print("Nederīga mērvienība")
+            print("Nederīga mērvienība.")
+else:
+    print("Nav ievadīts vesels pozitīvs skaitlis.")
